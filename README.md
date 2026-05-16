@@ -84,17 +84,17 @@ Three classifiers are trained and compared across three classification targets: 
 
 | Model | Functional Group | Carbon Count | Compound |
 |---|---|---|---|
-| Random Forest | — | — | — |
-| XGBoost | — | — | — |
-| Voting Classifier | — | — | — |
+| Random Forest | 59.26 | 58.02 | 32.10 |
+| XGBoost | 59.00 | 48.00 | 28.00 |
+| Voting Classifier | 65.26 | 65.32 | 50.72 |
 
 **Integrated feature set (height + timing + shape):**
 
 | Model | Functional Group | Carbon Count | Compound |
 |---|---|---|---|
-| Random Forest | — | — | — |
-| XGBoost | — | — | — |
-| Voting Classifier | — | — | — |
+| Random Forest | 100.00 | 98.77 | 92.59 |
+| XGBoost | 96.00 | 96.00  | 91.00 |
+| Voting Classifier | 100.00 | 100.00 | 81.16 |
 
 ---
 
