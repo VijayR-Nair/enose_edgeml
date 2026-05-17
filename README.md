@@ -17,7 +17,7 @@ The pipeline was developed as part of a Master's thesis at **Deggendorf Institut
 ## The Hardware Setup
 
 
-<img width="1584" height="1092" alt="_- visual selection" src="https://github.com/user-attachments/assets/bfd202de-907f-4820-954e-8e0698dc38d9" />
+<img width="1024" height="500" alt="image" src="https://github.com/user-attachments/assets/2136bc4f-2b22-49e9-826b-e69c5de5f9ab" />
 
 
 The GC separates compounds chromatographically over time. Four MOS sensor layers at the column outlet each produce a time-series response. Because MOS sensors are non-selective by nature, the intelligence lives in the feature extraction and model — not the sensor itself.
