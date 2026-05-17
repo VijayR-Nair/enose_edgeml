@@ -16,6 +16,12 @@ The pipeline was developed as part of a Master's thesis at **Deggendorf Institut
 
 ## The Hardware Setup
 
+Achieving ML Classification
+ML Classification
+Signal Processing
+MOS Sensor Array
+GC Column
+
 ```
 GC Column  →  MOS Sensor Array (4 layers)  →  Signal Processing  →  ML Classification
               [GC-SOMSA platform]
