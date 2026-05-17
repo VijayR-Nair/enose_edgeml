@@ -81,6 +81,9 @@ Three classifiers are trained and compared across three classification targets: 
 
 **Peak height features only:**
 
+<img width="2068" height="1422" alt="_- visual selection" src="https://github.com/user-attachments/assets/e4070cf3-b8ed-401c-9410-c88d49a0abeb" />
+
+
 | Model | Functional Group | Carbon Count | Compound |
 |---|---|---|---|
 | Random Forest | 59.26 | 58.02 | 32.10 |
