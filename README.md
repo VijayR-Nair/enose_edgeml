@@ -16,15 +16,9 @@ The pipeline was developed as part of a Master's thesis at **Deggendorf Institut
 
 ## The Hardware Setup
 
-Achieving ML Classification
-ML Classification
-Signal Processing
-MOS Sensor Array
-GC Column
 
 ```
-GC Column  →  MOS Sensor Array (4 layers)  →  Signal Processing  →  ML Classification
-              [GC-SOMSA platform]
+GC C<img width="1584" height="1092" alt="_- visual selection" src="https://github.com/user-attachments/assets/3616f1bd-d1ef-4897-8dfa-4579301e3fb5" />
 ```
 
 The GC separates compounds chromatographically over time. Four MOS sensor layers at the column outlet each produce a time-series response. Because MOS sensors are non-selective by nature, the intelligence lives in the feature extraction and model — not the sensor itself.
