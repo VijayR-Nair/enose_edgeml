@@ -1,0 +1,4 @@
+filename,compound,functional_group,class_label
+gcmetrics_ethyldecanoate_1.csv,ethyl decanoate,ester,0
+gcmetrics_decanoic_acid_1.csv,decanoic acid,carboxylic acid,1
+gcmetrics_decanol_1.csv,decanol,alcohol,2

@@ -1,0 +1,17 @@
+paths:
+  raw_data_dir: data/raw
+  processed_data_dir: data/processed
+  feature_dir: data/features
+  model_dir: outputs/models
+  report_dir: outputs/reports
+  plot_dir: outputs/plots
+
+data_processing:
+  timestamp_scale: 1.0e-6
+  repeat: 1
+  min_fd: 4
+  max_fd: 1024
+
+training:
+  test_size: 0.25
+  random_state: 42

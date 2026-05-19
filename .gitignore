@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# environment
+penv/
+venv/
+.env
+
+# data files - avoid pushing large/raw data
+data/raw/
+data/processed/
+data/synchronized/
+data/features/*.csv
+
+# outputs
+outputs/
+*.joblib
+*.pkl
+*.npy
+*.h5
