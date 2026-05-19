@@ -242,21 +242,9 @@ Generate a pinned environment file with:
 pip freeze > requirements.txt
 ```
 
----
-
-## Thesis Context
-
-Developed as part of the Master's thesis:
-
-**Fingerprinting of VOC Profiles for GC-Sensor Systems**  
-M.Eng. Artificial Intelligence for Smart Sensors and Actuators  
-Deggendorf Institute of Technology / Fraunhofer Institute, Cham  
-2025
+--
 
 **Author:** Vijay Radhakrishnan Nair
 
----
 
-## Citation / Acknowledgement
 
-If this project is useful for your work, please consider citing the thesis or giving the repository a ⭐.
