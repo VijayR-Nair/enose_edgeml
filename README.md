@@ -6,7 +6,7 @@
 
 ## Overview
 
-Conventional gas chromatography delivers strong chemical separation, but typical GC systems are expensive, lab-bound, and require trained operators. This project explores a leaner alternative: combining a gas chromatography column with a compact four-layer **Metal Oxide Semiconductor Sensor Array (GC-SOMSA)** and using machine learning to classify volatile organic compounds (VOCs).
+Conventional gas chromatography delivers strong chemical separation, but typical GC systems are expensive, lab-bound, and require trained operators. This project explores a leaner alternative: combining a gas chromatography column with a compact four-layer **GC-SOMSA** and using machine learning to classify volatile organic compounds (VOCs).
 
 The core idea is to shift part of the selectivity problem from hardware into software. Instead of relying on complex analytical instrumentation alone, the pipeline preprocesses raw sensor traces, extracts interpretable peak-based features, and trains compact supervised models for VOC classification.
 
