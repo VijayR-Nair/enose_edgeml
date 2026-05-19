@@ -8,9 +8,7 @@
 
 Conventional gas chromatography delivers strong chemical separation, but typical GC systems are expensive, lab-bound, and require trained operators. This project explores a leaner alternative: combining a gas chromatography column with a compact four-layer **GC-SOMSA** and using machine learning to classify volatile organic compounds (VOCs).
 
-The core idea is to shift part of the selectivity problem from hardware into software. Instead of relying on complex analytical instrumentation alone, the pipeline preprocesses raw sensor traces, extracts interpretable peak-based features, and trains compact supervised models for VOC classification.
-
-The work was developed as part of the Master's thesis **“Fingerprinting of VOC Profiles for GC-Sensor Systems”** at **Deggendorf Institute of Technology / Fraunhofer Institute, Cham**. The long-term goal is practical deployment in constrained environments such as packaged food quality monitoring, on-site screening, and portable chemical sensing.
+The core idea is to shift part of the selectivity problem from hardware into software. Instead of relying on complex analytical instrumentation alone, the pipeline preprocesses raw sensor traces, extracts interpretable peak-based features, and trains compact supervised models for VOC classification. The long-term goal is practical deployment in constrained environments such as packaged food quality monitoring, on-site screening, and portable chemical sensing.
 
 ---
 
