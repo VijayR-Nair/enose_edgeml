@@ -82,48 +82,68 @@ Three classifiers are trained and compared across three classification targets: 
 ## Project Structure
 
 ```
-├── Data_ML.py              # Data loading, preprocessing & feature pivot table
-├── RF.py                   # Random Forest classifier
-├── XGBoost.py              # XGBoost classifier
-├── voting_classifier.py    # Soft voting ensemble (LR + LDA + SVM)
-├── requirements.txt        # Python dependencies
+.
+├── configs/
+│   ├── config.yaml
+│   └── compound_map.csv
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── features/
+├── src/
+│   ├── data_processing/
+│   │   ├── gc_sensor_pipeline.py
+│   │   └── smooth_extract_features.py
+│   └── ml/
+│       ├── dataset.py
+│       ├── model_factory.py
+│       ├── train_models.py
+│       └── predict.py
+├── outputs/
+│   ├── models/
+│   ├── reports/
+│   └── predictions/
 └── README.md
 ```
 
 ---
 
-## Installation & Usage
+Pipeline
+1. Data Processing
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
-```
+src/data_processing/gc_sensor_pipeline.py
 
-### 2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
+Converts raw sensor .h5 files to .npy
+Converts GC .txt files to .npy
+Synchronizes GC windows with MOS sensor timestamps
+Saves synchronized sensor segments
+2. Feature Extraction
 
-### 3. Set your data paths
-In `Data_ML.py`, update `file_compound_map` to point to your local CSV files:
-```python
-file_compound_map = {
-    "/your/path/to/4methylphenol.csv": "4-methylphenol",
-    ...
-}
-```
+src/data_processing/smooth_extract_features.py
 
-### 4. Run a model
-```bash
-python RF.py
-python XGBoost.py
-python voting_classifier.py
-```
+Applies Butterworth smoothing
+Detects peaks
+Estimates baseline
+Extracts peak-based features such as height, area, duration, width, asymmetry, and peak timing
+3. Model Training
 
-Each script loads data from `Data_ML.py` and outputs a classification report and confusion matrix.
+src/ml/train_models.py
 
----
+Supported models:
+
+Random Forest
+XGBoost
+Voting Classifier
+
+4. Prediction
+
+src/ml/predict.py
+
+Configuration
+
+Labels are managed through:
+
+configs/compound_map.csv
 
 ## Edge Deployment — The Goal
 
@@ -134,16 +154,18 @@ This influenced every choice made:
 - **Model choice** — tree-based and linear models with low inference cost
 - **Low model complexity** — XGBoost capped at `max_depth=6`, RF at 100 estimators
 
-### Roadmap toward edge deployment
+Data Policy
 
-- [ ] **Model export** — convert trained models to ONNX or TFLite for embedded inference
-- [ ] **Quantisation & pruning** — reduce model size for microcontroller memory constraints
-- [ ] **Real-time streaming pipeline** — trigger classification from live sensor input without GC timing reference
-- [ ] **GC-independent mode** — learn VOC fingerprints directly from MOS time-series, removing the dependency on chromatographic separation entirely
-- [ ] **Retention-time normalisation** — use internal standards to compensate for run-to-run shifts in field conditions
-- [ ] **Robustness testing** — evaluate performance under humidity variation, sensor drift, and ambient background VOCs
-- [ ] **Hardware benchmark** — measure inference latency on Raspberry Pi or STM32 microcontroller
-- [ ] **Expand compound library** — broader chemical space for more generalizable models
+Large files are not tracked in GitHub.
+
+Ignored files include:
+
+Raw sensor data
+Processed .npy files
+Feature CSVs
+Trained models
+Output reports
+Python cache files
 
 ---
 
