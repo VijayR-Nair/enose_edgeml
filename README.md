@@ -76,25 +76,6 @@ Three classifiers are trained and compared across three classification targets: 
 
 ---
 
-## Results
-
-> *(Fill in your actual accuracy values after running the models)*
-
-**Peak height features only:**
-
-| Model | Functional Group | Carbon Count | Compound |
-|---|---|---|---|
-| Random Forest | — | — | — |
-| XGBoost | — | — | — |
-| Voting Classifier | — | — | — |
-
-**Integrated feature set (height + timing + shape):**
-
-| Model | Functional Group | Carbon Count | Compound |
-|---|---|---|---|
-| Random Forest | — | — | — |
-| XGBoost | — | — | — |
-| Voting Classifier | — | — | — |
 
 ---
 
